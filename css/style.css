@@ -5,13 +5,34 @@ body {
   text-align: center;
 }
 
-.jumbotron {
-  background-color: black;
-  margin-bottom: 1em;
+.card-title {
+  font-size: 1.25em;
+  font-weight: 700;
 }
 
-h1 {
+.card {
+  margin-bottom: 0;
+  border: none;
+}
+
+.contact-panel {
+  margin-top: 0.75em;
+}
+
+.yell {
+  margin-top: 1em;
+}
+
+.card-text {
+  font-weight: 400;
+}
+
+.jumbotron {
+  background-color: black;
+  padding: 0.5em 0;
+  margin-bottom: 1em;
   letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 #title-the {
@@ -32,11 +53,22 @@ h1 {
 }
 
 #service {
-  font-size: 1em;
-  color: grey;
+  font-size: 0.75em;
+  color: white;
+  padding: 1em 0;
 }
 
 #motto {
+  text-transform: none;
+  font-size: 0.75em;
+  color: white;
   font-family: 'Indie Flower', cursive;
-  font-size: 1.5em;
+}
+
+#map {
+  width: 100%;
+}
+
+.address {
+  margin-bottom: 0;
 }
