@@ -72,3 +72,20 @@ body {
 .address {
   margin-bottom: 0;
 }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+  color: black;
+  text-align: center;
+}
+
+/* Display */
+@media (max-width: 1025px) {
+  .desktop-only {
+    display: none;
+  }
+}
