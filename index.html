@@ -67,6 +67,9 @@
     <meta name="theme-color" content="#000000">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="css/glidejs.min.css" />
+
     <!-- Preload -->
     <link
       rel="preload"
@@ -82,14 +85,17 @@
       crossorigin="anonymous"
       onload="this.rel = 'stylesheet'"
     >
+    <script
+      type="text/javascript"
+      src=https://cdn.jsdelivr.net/npm/@glidejs/glide>
+    </script>
 
     <noscript>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
       <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Varela+Round" rel="stylesheet" crossorigin="anonymous">
     </noscript>
 
-    <!-- Inline critical path CSS -->
-    <style>
+  <style type="text/css">
       body {
         font-display: swap;
         font-family: 'Varela Round', sans-serif;
@@ -122,8 +128,8 @@
 
       .jumbotron {
         background-color: black;
-        padding: 0.5em 0;
-        margin-bottom: 1em;
+        padding: 0.25em 0;
+        margin-bottom: 0;
         letter-spacing: 0.1em;
         text-transform: uppercase;
       }
@@ -145,10 +151,26 @@
         padding: 0em 0.5em;
       }
 
+      .promo-image {
+        border-radius: 15%;
+        /*width: 275px;*/
+        height: 200px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 2.5%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+      }
+
       #service {
         font-size: 0.75em;
         color: white;
         padding: 1em 0;
+      }
+
+      #opening-hours {
+        font-size: 1em;
+        color: white;
+        padding: 1em 0 0 0;
       }
 
       #motto {
@@ -175,103 +197,153 @@
         color: black;
         text-align: center;
       }
+
+      hr.rule {
+        background-color: black;
+        width: 75%;
+        height: 1px;
+        border: none;
+      }
+
+      #social {
+        font-size: 1em;
+        display: inline;
+      }
+
+      #social > a {
+        color: white;
+        padding: 0 5px;
+      }
+
+      #social > a:hover {
+        color: red;
+        text-decoration: underline;
+      }
+
+      @media only screen and (min-width: 768px) {
+        /* For desktop: */
+        .glide {
+          margin-top: 1em;
+        }
+
+        hr.rule {
+          width: 50%;
+        }
+      }
     </style>
   </head>
-<body>
-  <header class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 id="title"><span id="title-the">The</span><br/><span id="title-pressing">Pressing</span><br/><span id="title-station">Station</span></h1>
-      <h3 id="service">Professional ironing service</h3>
-      <h4 id="motto">You hate it, we love it!</h4>
-    </div>
-  </header>
-  <main>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-8 offset-md-2">
-          <h5 class="card-title">Who are we?</h5>
-          <p class="card-text">
-            The Pressing Station is a professional ironing service based in Kidderminster, Worcestershire.
-          </p>
-          <p class="card-text">
-            We offer free collection and delivery* throughout the Wyre Forest area including
-            Kidderminster,
-            Hagley,
-            Blakedown,
-            Bewdley,
-            Stourport,
-            Hartlebury,
-            Chaddesley Corbett,
-            and more.
-          </p>
-          <p class="card-text">
-            Walk-in clients are always welcome.
-          </p>
-          <p class="card-text">
-            Same-day ironing also available*.
-          </p>
-          <p class="card-text">
-            <b>
-              * Qualifying orders only, terms and conditions apply.
-            </b>
-          </p>
-        </div>
-        <div class="col-sm-12 col-md-12">
-          <hr/>
-          <div class="card border-light">
-            <div class="card-body">
-              <h5 class="card-title">Want to get in touch?</h5>
-              <div class="container">
-                <div class="row">
-                  <div class="col-5 offset-1">
-                    <a href="https://en-gb.facebook.com/pages/category/Laundromat/The-Pressing-Station-173998173343881/">
-                      <img src="images/facebook.svg" width="48px" alt="Facebook"/>
-                      <p>
-                        Find us on Facebook
-                      </p>
-                    </a>
-                  </div>
-                  <div class="col-5">
-                    <a href="tel:01562632962">
-                      <img src="images/phone.svg" width="48px" alt="Phone"/>
-                      <p>
-                        Call us on 01562 632962
-                      </p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <p class="card-text yell">We're also on <a href="https://www.yell.com/biz/the-pressing-station-kidderminster-4958021/">Yell.com</a></p>
+  <body>
+    <header class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 id="title"><span id="title-the">The</span><br/><span id="title-pressing">Pressing</span><br/><span id="title-station">Station</span></h1>
+        <h3 id="service">Professional ironing service</h3>
+        <h4 id="motto">You hate it, we love it!</h4>
+      </div>
+    </header>
+    <header class="jumbotron jumbotron-fluid" style="background-color: #faf5ac; color: black;">
+      <div class="container">
+        <h4 style="font-size: 0.8125em;">Open Monday - Friday, 7am - 3pm</h4>
+        <h4 style="font-size: 0.8125em; margin-bottom: 0;">55 Lorne Street, Kidderminster, Worcestershire, DY10 1SX</h4>
+      </div>
+    </header>
+    <header class="jumbotron jumbotron-fluid">
+      <h4 id="social">
+        <a href="https://en-gb.facebook.com/pages/category/Laundromat/The-Pressing-Station-173998173343881/">
+          Facebook
+        </a>
+      </h4>
+      <h4 id="social">
+        <a href="tel:01562632962">
+          Call us
+        </a>
+      </h4>
+      <h4 id="social">
+        <a href="https://www.yell.com/biz/the-pressing-station-kidderminster-4958021/">
+          Yell
+        </a>
+      </h4>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="glide">
+            <div data-glide-el="track" class="glide__track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                  <img src="images/hanging.jpeg" width="100%" alt="Hanging shirts">
+                </li>
+                <li class="glide__slide">
+                  <img src="images/van.jpeg" width="100%" alt="Van">
+                </li>
+                <li class="glide__slide">
+                  <img src="images/van2.jpeg" width="100%" alt="Van">
+                </li>
+              </ul>
+            </div>
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+              <button class="glide__bullet" data-glide-dir="=0"></button>
+              <button class="glide__bullet" data-glide-dir="=1"></button>
+              <button class="glide__bullet" data-glide-dir="=2"></button>
             </div>
           </div>
         </div>
       </div>
-      <hr/>
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="card border-light">
-            <div class="card-body">
-              <h5 class="card-title">Come visit us</h5>
-              <p class="card-text text-muted">
-                55 Lorne Street,
-                Kidderminster,
-                Worcestershire,
-                DY10 1SX
-              </p>
-              <iframe
-                id="map"
-                title="Map to The Pressing Station"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.03705087355!2d-2.2372410840808326!3d52.387878653764446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48708c56ca1fcc05%3A0xfb7088eab365da02!2sThe+Pressing+Station!5e0!3m2!1sen!2suk!4v1555152052184!5m2!1sen!2suk"
-                frameBorder="0"
-                allowfullscreen></iframe>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-8 offset-md-2">
+            <p class="card-text">
+              The Pressing Station is a professional ironing service based in Kidderminster, Worcestershire.
+            </p>
+            <p class="card-text">
+              We offer free collection and delivery* throughout the Wyre Forest area including
+              Kidderminster,
+              Hagley,
+              Blakedown,
+              Bewdley,
+              Stourport,
+              Hartlebury,
+              Chaddesley Corbett,
+              and more.
+            </p>
+            <p class="card-text">
+              Walk-in clients are always welcome.
+            </p>
+            <p class="card-text">
+              Same-day ironing also available*.
+            </p>
+            <p class="card-text">
+              <b>
+                * Qualifying orders only, terms and conditions apply.
+              </b>
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </main>
-  <footer>
-    <small class="text-muted">© The Pressing Station 2019</small>
-  </footer>
+      </div>
+    </main>
+    <footer>
+      <small class="text-muted">© The Pressing Station 2019</small>
+    </footer>
+
+    <script>
+      var glide = new Glide('.glide', {
+        autoplay: 3000,
+        type: 'carousel',
+        perView: 3,
+        focusAt: 'center',
+        gap: 50,
+        breakpoints: {
+          800: {
+            perView: 1
+          },
+          480: {
+            perView: 1
+          }
+        }
+      });
+
+      glide.mount();
+    </script>
+  </body>
 </html>
 
